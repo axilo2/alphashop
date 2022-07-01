@@ -1,0 +1,15 @@
+<div>
+  <label for="userId">User Id:</label>
+  <input type="text" id="userId" placeholder="Nome Utente" [(ngModel)]= userId>
+</div>
+<div>
+  <label for="password">Password:</label>
+  <input type="password" id="password" placeholder="Password" [(ngModel)]= password>
+</div>
+<div>
+  <button (click)="gestAuth()">Connetti</button>
+</div>
+<br>
+<p>Il tuo nome è: {{ userId }}</p>
+<p>La tua password è: {{ password }}</p>
+
