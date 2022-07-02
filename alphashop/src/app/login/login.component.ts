@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  titolo: string = "Accesso & Autenticazione";
+  sottotitolo: string = "Inserisci UserId e Password";
+
+
   userId: string = "Marco";
   password: string = "";
 
