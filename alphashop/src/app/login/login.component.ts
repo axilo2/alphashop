@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,10 @@ export class LoginComponent implements OnInit {
   password: string = "";
 
   autenticato: boolean = true;
-  consentito: boolean = false;
 
   errMsg: string = "Spiacenti, la userId e/o password sono errati!";
-  okMsg: string = "Accesso consentito!";
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,11 +24,11 @@ export class LoginComponent implements OnInit {
     console.log(this.userId);
 
     if(this.userId === "Marco" && this.password === "123_Stella") {
+      this.route.navigate(['welcome']);
+
       this.autenticato = true;
-      this.consentito = true;
     }else{
       this.autenticato = false;
-      this.consentito = false;
     }
   }
 
