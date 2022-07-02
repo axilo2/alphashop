@@ -8,7 +8,7 @@
   <input type="password" id="password" placeholder="Password" [(ngModel)]= password>
 
 
-  <button (click)="gestAuth()">Connetti</button>
+  <button class="btn btn-primary" (click)="gestAuth()">Connetti</button>
 </div>
 <div *ngIf="!autenticato">
   {{ errMsg }}
