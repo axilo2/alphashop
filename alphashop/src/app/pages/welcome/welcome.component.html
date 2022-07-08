@@ -1,2 +1,8 @@
 <app-jumbotron [Titolo]="titolo" [SottoTitolo]="sottotitolo" [Show]="false"></app-jumbotron>
 <h3>Ciao {{ utente }} <a routerLink="/articoli">Clicca qui</a> per accedere all'elenco degli articoli disponibili!</h3>
+<div class="ms-2">
+  <button (click)="getSaluti()" class="btn btn-primary">Saluti</button><br>
+  <h2 style="color: #04bc04;">{{ saluti }}</h2>
+  <h2 style="color: #ba0404;">{{ errore }}</h2>
+</div>
+
